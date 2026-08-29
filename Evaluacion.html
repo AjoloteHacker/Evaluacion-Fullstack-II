@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portafolio Web | Evaluación Fullstack II</title>
+    <!-- Librerías de Iconos Vectoriales (Font Awesome 6 & Devicon) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Barra de Progreso de Lectura -->
+    <div id="barraProgreso" class="barra-progreso"></div>
+
+    <!-- Encabezado de Navegación -->
+    <header class="encabezado">
+        <div class="logo">
+            <span class="punto-logo"></span>
+            Mi Portafolio
+        </div>
+
+        <nav class="navegacion">
+            <a href="#inicio" class="nav-link activo">Inicio</a>
+            <a href="#sobre-mi" class="nav-link">Sobre Mí</a>
+            <a href="#habilidades" class="nav-link">Habilidades</a>
+            <a href="#proyectos" class="nav-link">Proyectos</a>
+            <a href="#contacto" class="nav-link">Contacto</a>
+        </nav>
+
+        <button id="btnTema" class="boton secundario" type="button"><i class="fa-solid fa-moon"></i> Modo oscuro</button>
+    </header>
+
+    <!-- Contenido Principal -->
+    <main class="contenedor">
+
+        <!-- Sección Inicio / Hero -->
+        <section id="inicio" class="hero">
+            <div class="hero-texto">
+                <div class="badge-estudiante">
+                    <span class="punto-pulso"></span> ESTUDIANTE FULL STACK II
+                </div>
+                <h1 class="focus-text">
+                    <span>Desarrollador</span>
+                    <span>Web</span>
+                    <span>en</span>
+                    <span class="palabra-destacada">Formación</span>
+                </h1>
+                <p>Bienvenido a mi portafolio. Aquí podrás encontrar los proyectos, habilidades y ejercicios prácticos desarrollados durante la asignatura.</p>
+                
+                <div class="hero-botones">
+                    <a href="#proyectos" class="boton primario"><i class="fa-solid fa-folder-open"></i> Ver Proyectos</a>
+                    <a href="#contacto" class="boton secundario"><i class="fa-solid fa-envelope"></i> Contactar</a>
+                </div>
+            </div>
+
+            <a href="https://github.com/AjoloteHacker" target="_blank" rel="noopener noreferrer" class="tarjeta-perfil-enlace">
+                <div class="tarjeta-perfil">
+                    <div class="avatar-contenedor">
+                        <img src="assets/Avatar.jpg" alt="Joaquín Oyarzún" class="avatar-img">
+                        <span class="github-badge-flotante"><i class="devicon-github-original"></i></span>
+                    </div>
+                    <h2>Joaquín Oyarzún <i class="fa-solid fa-arrow-up-right-from-square icono-link"></i></h2>
+                    <p class="rol">Desarrollador Fullstack</p>
+                    <span class="badge-estado"><i class="fa-solid fa-circle-check"></i> Disponible para proyectos</span>
+                </div>
+            </a>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="sobre-mi" class="seccion">
+            <div class="titulo-seccion">
+                <h2 class="focus-text-seccion"><span>Sobre</span> <span>Mí</span></h2>
+                <p>Un poco de información personal y mi progreso académico</p>
+            </div>
+
+            <div class="resumen-grid">
+                <article class="tarjeta-resumen">
+                    <h3>3+</h3>
+                    <p>Módulos completados</p>
+                </article>
+                <article class="tarjeta-resumen">
+                    <h3>10+</h3>
+                    <p>Proyectos y ejercicios</p>
+                </article>
+                <article class="tarjeta-resumen">
+                    <h3>100%</h3>
+                    <p>Compromiso y aprendizaje</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Habilidades -->
+        <section id="habilidades" class="seccion">
+            <div class="titulo-seccion">
+                <h2 class="focus-text-seccion"><span>Habilidades</span> <span class="palabra-destacada">Técnicas</span></h2>
+                <p>Tecnologías que he aprendido y aplicado en las clases</p>
+            </div>
+
+            <div class="habilidades-grid">
+                <article class="tarjeta-habilidad">
+                    <h3><i class="fa-solid fa-code" style="color: var(--acento);"></i> Frontend</h3>
+                    <p>Estructuración y diseño de sitios web responsivos y accesibles.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                        <span class="tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                        <span class="tag"><i class="fa-solid fa-table-cells"></i> Flexbox / Grid</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-habilidad">
+                    <h3><i class="devicon-javascript-plain colored"></i> Lógica & JS</h3>
+                    <p>Manipulación del DOM, eventos, funciones y estructuras dinámicas.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="devicon-javascript-plain colored"></i> JavaScript ES6</span>
+                        <span class="tag"><i class="fa-solid fa-diagram-project"></i> DOM API</span>
+                        <span class="tag"><i class="fa-solid fa-bolt"></i> Eventos</span>
+                    </div>
+                </article>
+
+                <article class="tarjeta-habilidad">
+                    <h3><i class="fa-solid fa-wrench" style="color: var(--acento);"></i> Herramientas</h3>
+                    <p>Control de versiones y entornos de desarrollo de software.</p>
+                    <div class="tags">
+                        <span class="tag"><i class="devicon-git-plain colored"></i> Git / GitHub</span>
+                        <span class="tag"><i class="devicon-vscode-plain colored"></i> VS Code</span>
+                        <span class="tag"><i class="fa-solid fa-terminal"></i> Terminal</span>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Sección Proyectos -->
+        <section id="proyectos" class="seccion">
+            <div class="titulo-seccion">
+                <h2 class="focus-text-seccion"><span>Mis</span> <span class="palabra-destacada">Proyectos</span></h2>
+                <p>Trabajos realizados en las clases de Fullstack II</p>
+            </div>
+
+            <!-- Filtros de Proyectos -->
+            <div class="filtros">
+                <button class="filtro-btn activo" data-filtro="todos">Todos</button>
+                <button class="filtro-btn" data-filtro="html-css">HTML & CSS</button>
+                <button class="filtro-btn" data-filtro="javascript">JavaScript</button>
+                <button class="filtro-btn" data-filtro="software">Software & Tools</button>
+            </div>
+
+            <div class="proyectos-grid">
+                <!-- Proyecto 1: Pokedex -->
+                <a href="https://github.com/AjoloteHacker/Pokedex_de_bajo_presupuesto" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="javascript">
+                    <div class="imagen-proyecto">
+                        <i class="devicon-docker-plain colored"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">JavaScript & Docker</span>
+                        <h3>Pokedex de bajo presupuesto</h3>
+                        <p>Proyecto personal de una Pokédex interactiva con apartado de combates y empaquetado funcional en Docker.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                            <span class="tag"><i class="devicon-javascript-plain colored"></i> JS</span>
+                            <span class="tag"><i class="devicon-docker-plain colored"></i> Docker</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 2: Fullstack-II -->
+                <a href="https://github.com/AjoloteHacker/Fullstack-II" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
+                    <div class="imagen-proyecto">
+                        <i class="devicon-html5-plain colored"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">HTML & CSS / Web</span>
+                        <h3>Fullstack-II</h3>
+                        <p>Repositorio central de la asignatura Fullstack II con actividades, guías, componentes y la evaluación principal.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                            <span class="tag"><i class="devicon-css3-plain colored"></i> CSS Grid</span>
+                            <span class="tag"><i class="devicon-javascript-plain colored"></i> JS</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 3: AjoloVim -->
+                <a href="https://github.com/AjoloteHacker/AjoloVim" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
+                    <div class="imagen-proyecto">
+                        <i class="devicon-vim-plain colored"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">Herramientas & Lua</span>
+                        <h3>AjoloVim Config</h3>
+                        <p>Configuración personalizada y optimizada de NeoVim escrita en Lua para maximizar la velocidad de desarrollo en terminal.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-lua-plain colored"></i> Lua</span>
+                            <span class="tag"><i class="devicon-vim-plain colored"></i> NeoVim</span>
+                            <span class="tag"><i class="fa-solid fa-terminal"></i> CLI</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 4: Tetris C++ -->
+                <a href="https://github.com/AjoloteHacker/Tetris-" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
+                    <div class="imagen-proyecto">
+                        <i class="devicon-cplusplus-plain colored"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">C++ & Lógica</span>
+                        <h3>Tetris en C++</h3>
+                        <p>Juego de Tetris desarrollado en C++ para practicar algoritmos de colisión, matrices y lógica de programación en consola/gráfica.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-cplusplus-plain colored"></i> C++</span>
+                            <span class="tag"><i class="fa-solid fa-cubes"></i> Algoritmos</span>
+                            <span class="tag"><i class="fa-solid fa-gamepad"></i> GameDev</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 5: Fullstack Java -->
+                <a href="https://github.com/AjoloteHacker/Fullstack" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
+                    <div class="imagen-proyecto">
+                        <i class="devicon-java-plain colored"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">Java & Backend</span>
+                        <h3>Fullstack Java Core</h3>
+                        <p>Proyectos y ejercicios desarrollados en Java enfocados en lógica orientada a objetos (POO) y arquitectura backend.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-java-plain colored"></i> Java</span>
+                            <span class="tag"><i class="fa-solid fa-cubes-stacked"></i> POO</span>
+                            <span class="tag"><i class="fa-solid fa-server"></i> Backend</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 6: Rice Arch Linux -->
+                <a href="https://github.com/AjoloteHacker/Rice-Arch-Linux-para-Ian" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
+                    <div class="imagen-proyecto">
+                        <i class="devicon-linux-plain colored"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">Linux & SysAdmin</span>
+                        <h3>Rice Arch Linux</h3>
+                        <p>Personalización estética avanzada (Rice), dotfiles y configuración de entorno de escritorio para Arch Linux.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-archlinux-plain colored"></i> Arch Linux</span>
+                            <span class="tag"><i class="devicon-bash-plain colored"></i> Bash</span>
+                            <span class="tag"><i class="fa-solid fa-sliders"></i> Dotfiles</span>
+                        </div>
+                    </div>
+                </a>
+
+                <!-- Proyecto 8: Taller Base de Datos -->
+                <a href="https://github.com/AjoloteHacker/Taller-Base-de-datos-004D" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
+                    <div class="imagen-proyecto">
+                        <i class="fa-solid fa-database" style="color: #3b82f6;"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">Base de Datos</span>
+                        <h3>Taller Base de Datos 004D</h3>
+                        <p>Proyectos y talleres dedicados al diseño de bases de datos, consultas SQL e interfaz de apoyo web.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="fa-solid fa-database"></i> SQL</span>
+                            <span class="tag"><i class="fa-solid fa-table"></i> Database</span>
+                            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML</span>
+                        </div>
+                    </div>
+                </a>
+
+
+                <!-- Proyecto 11: Evaluacion 1 FullStack -->
+                <a href="https://github.com/AjoloteHacker/Evaluacion-1-FullStack" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
+                    <div class="imagen-proyecto">
+                        <i class="fa-solid fa-file-code" style="color: #2563eb;"></i>
+                    </div>
+                    <div class="contenido-proyecto">
+                        <span class="categoria-tag">HTML & CSS</span>
+                        <h3>Evaluación 1 FullStack</h3>
+                        <p>Primera evaluación práctica de maquetación semántica y diseño web desarrollada para la asignatura Fullstack.</p>
+                        <div class="tags">
+                            <span class="tag"><i class="devicon-html5-plain colored"></i> HTML5</span>
+                            <span class="tag"><i class="devicon-css3-plain colored"></i> CSS3</span>
+                            <span class="tag"><i class="fa-solid fa-graduation-cap"></i> Duoc UC</span>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </section>
+
+        <!-- Sección Contacto -->
+        <section id="contacto" class="seccion">
+            <div class="titulo-seccion">
+                <h2 class="focus-text-seccion"><span>Contacto</span></h2>
+                <p>¿Tienes alguna duda o consulta? Escríbeme un mensaje.</p>
+            </div>
+
+            <div class="contacto-contenedor">
+                <form id="formContacto" class="form-contacto">
+                    <div class="campo">
+                        <label for="nombre">Nombre completo</label>
+                        <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" placeholder="tu.correo@duocuc.cl" required>
+                    </div>
+
+                    <div class="campo">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" rows="4" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="boton primario">Enviar Mensaje</button>
+                </form>
+
+                <p id="mensajeEstado" class="mensaje-estado" hidden></p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Pie de página -->
+    <footer class="pie-pagina">
+        <p> 2026 Evaluación Fullstack II | Duoc UC</p>
+    </footer>
+
+    <!-- Botón Volver Arriba -->
+    <button id="btnVolverArriba" class="btn-volver-arriba" type="button" aria-label="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+</body>
+</html>
