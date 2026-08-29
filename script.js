@@ -1,10 +1,6 @@
-/* ==========================================================================
-   LÓGICA JAVASCRIPT - EVALUACIÓN FULLSTACK II
-   ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // 1. Alternar Tema Claro / Oscuro
     const btnTema = document.getElementById('btnTema');
     
     if (btnTema) {
@@ -18,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 2. Filtrado de Proyectos
     const botonesFiltro = document.querySelectorAll('.filtro-btn');
     const tarjetasProyecto = document.querySelectorAll('.tarjeta-proyecto');
 
@@ -41,7 +36,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 3. Validación y Envío del Formulario de Contacto
     const formContacto = document.getElementById('formContacto');
     const mensajeEstado = document.getElementById('mensajeEstado');
 
@@ -60,8 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 mensajeEstado.hidden = false;
                 return;
             }
-
-            // Simulación de envío exitoso
+            
             mensajeEstado.textContent = 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.';
             mensajeEstado.style.borderColor = 'var(--exito)';
             mensajeEstado.style.color = 'var(--exito)';
@@ -69,14 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
             formContacto.reset();
 
-            // Ocultar mensaje después de 5 segundos
             setTimeout(() => {
                 mensajeEstado.hidden = true;
             }, 5000);
         });
     }
 
-    // 4. Resaltar enlace de navegación activo al hacer scroll
     const secciones = document.querySelectorAll('section[id]');
     const navLinks = document.querySelectorAll('.nav-link');
 
@@ -98,7 +89,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Barra de Progreso de Lectura (Opción 1)
     const barraProgreso = document.getElementById('barraProgreso');
     window.addEventListener('scroll', () => {
         const totalHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -108,7 +98,6 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 
-    // 6. Botón Flotante Volver Arriba en Esquina Inferior Derecha (Opción 3)
     const btnVolverArriba = document.getElementById('btnVolverArriba');
     if (btnVolverArriba) {
         window.addEventListener('scroll', () => {
