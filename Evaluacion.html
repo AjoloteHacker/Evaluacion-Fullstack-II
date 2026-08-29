@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portafolio Web | Evaluación Fullstack II</title>
-    <!-- Librerías de Iconos Vectoriales (Font Awesome 6 & Devicon) -->
+    
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="styles.css">
     <script src="script.js" defer></script>
 </head>
 <body>
-    <!-- Barra de Progreso de Lectura -->
+    
     <div id="barraProgreso" class="barra-progreso"></div>
 
-    <!-- Encabezado de Navegación -->
     <header class="encabezado">
         <div class="logo">
             <span class="punto-logo"></span>
@@ -32,10 +31,8 @@
         <button id="btnTema" class="boton secundario" type="button"><i class="fa-solid fa-moon"></i> Modo oscuro</button>
     </header>
 
-    <!-- Contenido Principal -->
     <main class="contenedor">
 
-        <!-- Sección Inicio / Hero -->
         <section id="inicio" class="hero">
             <div class="hero-texto">
                 <div class="badge-estudiante">
@@ -68,7 +65,6 @@
             </a>
         </section>
 
-        <!-- Sección Sobre Mí -->
         <section id="sobre-mi" class="seccion">
             <div class="titulo-seccion">
                 <h2 class="focus-text-seccion"><span>Sobre</span> <span>Mí</span></h2>
@@ -91,7 +87,6 @@
             </div>
         </section>
 
-        <!-- Sección Habilidades -->
         <section id="habilidades" class="seccion">
             <div class="titulo-seccion">
                 <h2 class="focus-text-seccion"><span>Habilidades</span> <span class="palabra-destacada">Técnicas</span></h2>
@@ -131,14 +126,12 @@
             </div>
         </section>
 
-        <!-- Sección Proyectos -->
         <section id="proyectos" class="seccion">
             <div class="titulo-seccion">
                 <h2 class="focus-text-seccion"><span>Mis</span> <span class="palabra-destacada">Proyectos</span></h2>
                 <p>Trabajos realizados en las clases de Fullstack II</p>
             </div>
 
-            <!-- Filtros de Proyectos -->
             <div class="filtros">
                 <button class="filtro-btn activo" data-filtro="todos">Todos</button>
                 <button class="filtro-btn" data-filtro="html-css">HTML & CSS</button>
@@ -147,7 +140,7 @@
             </div>
 
             <div class="proyectos-grid">
-                <!-- Proyecto 1: Pokedex -->
+        
                 <a href="https://github.com/AjoloteHacker/Pokedex_de_bajo_presupuesto" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="javascript">
                     <div class="imagen-proyecto">
                         <i class="devicon-docker-plain colored"></i>
@@ -164,7 +157,6 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 2: Fullstack-II -->
                 <a href="https://github.com/AjoloteHacker/Fullstack-II" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
                     <div class="imagen-proyecto">
                         <i class="devicon-html5-plain colored"></i>
@@ -181,7 +173,6 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 3: AjoloVim -->
                 <a href="https://github.com/AjoloteHacker/AjoloVim" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
                     <div class="imagen-proyecto">
                         <i class="devicon-vim-plain colored"></i>
@@ -198,7 +189,6 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 4: Tetris C++ -->
                 <a href="https://github.com/AjoloteHacker/Tetris-" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
                     <div class="imagen-proyecto">
                         <i class="devicon-cplusplus-plain colored"></i>
@@ -215,7 +205,6 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 5: Fullstack Java -->
                 <a href="https://github.com/AjoloteHacker/Fullstack" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
                     <div class="imagen-proyecto">
                         <i class="devicon-java-plain colored"></i>
@@ -232,7 +221,6 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 6: Rice Arch Linux -->
                 <a href="https://github.com/AjoloteHacker/Rice-Arch-Linux-para-Ian" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="software">
                     <div class="imagen-proyecto">
                         <i class="devicon-linux-plain colored"></i>
@@ -249,7 +237,6 @@
                     </div>
                 </a>
 
-                <!-- Proyecto 8: Taller Base de Datos -->
                 <a href="https://github.com/AjoloteHacker/Taller-Base-de-datos-004D" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
                     <div class="imagen-proyecto">
                         <i class="fa-solid fa-database" style="color: #3b82f6;"></i>
@@ -266,8 +253,6 @@
                     </div>
                 </a>
 
-
-                <!-- Proyecto 11: Evaluacion 1 FullStack -->
                 <a href="https://github.com/AjoloteHacker/Evaluacion-1-FullStack" target="_blank" rel="noopener noreferrer" class="tarjeta-proyecto" data-categoria="html-css">
                     <div class="imagen-proyecto">
                         <i class="fa-solid fa-file-code" style="color: #2563eb;"></i>
@@ -286,7 +271,6 @@
             </div>
         </section>
 
-        <!-- Sección Contacto -->
         <section id="contacto" class="seccion">
             <div class="titulo-seccion">
                 <h2 class="focus-text-seccion"><span>Contacto</span></h2>
@@ -319,12 +303,10 @@
 
     </main>
 
-    <!-- Pie de página -->
     <footer class="pie-pagina">
         <p> 2026 Evaluación Fullstack II | Duoc UC</p>
     </footer>
 
-    <!-- Botón Volver Arriba -->
     <button id="btnVolverArriba" class="btn-volver-arriba" type="button" aria-label="Volver arriba">
         <i class="fa-solid fa-arrow-up"></i>
     </button>
