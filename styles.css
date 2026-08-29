@@ -1,7 +1,3 @@
-/* ==========================================================================
-   ESTILOS GENERALES - EVALUACIÓN FULLSTACK II
-   ========================================================================== */
-
 :root {
     --fondo: #f4f5f7;
     --superficie: #ffffff;
@@ -14,7 +10,6 @@
     --exito: #10b981;
 }
 
-/* Modo oscuro opcional activado con JS */
 body.oscuro {
     --fondo: #121827;
     --superficie: #1e293b;
@@ -39,14 +34,12 @@ body {
     scroll-behavior: smooth;
 }
 
-/* Contenedor Principal */
 .contenedor {
     width: min(1000px, calc(100% - 40px));
     margin: 0 auto;
     padding: 40px 0;
 }
 
-/* Encabezado y Navegación */
 .encabezado {
     display: flex;
     justify-content: space-between;
@@ -94,7 +87,6 @@ body {
     font-weight: bold;
 }
 
-/* Botones */
 .boton {
     padding: 8px 16px;
     border-radius: 6px;
@@ -127,7 +119,6 @@ body {
     color: var(--acento);
 }
 
-/* Sección Hero / Inicio */
 .hero {
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
@@ -136,7 +127,6 @@ body {
     padding: 40px 0 60px 0;
 }
 
-/* Badge de estudiante con punto de pulso */
 .badge-estudiante {
     display: inline-flex;
     align-items: center;
@@ -336,7 +326,6 @@ body {
     font-weight: 600;
 }
 
-/* Animación Focus-Text para los Títulos de Secciones */
 .focus-text-seccion {
     display: inline-flex;
     justify-content: center;
@@ -380,7 +369,6 @@ body {
     }
 }
 
-/* Secciones Generales */
 .seccion {
     padding: 40px 0;
     border-top: 1px solid var(--borde);
@@ -399,7 +387,6 @@ body {
     font-size: 0.95rem;
 }
 
-/* Resumen Grid */
 .resumen-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -424,7 +411,6 @@ body {
     font-size: 0.9rem;
 }
 
-/* Habilidades Grid */
 .habilidades-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -467,7 +453,6 @@ body {
     gap: 5px;
 }
 
-/* Filtros y Proyectos Grid */
 .filtros {
     display: flex;
     gap: 10px;
@@ -580,7 +565,6 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     flex-grow: 1;
 }
 
-/* Contacto Formulario */
 .contacto-contenedor {
     max-width: 600px;
     margin: 0 auto;
@@ -635,7 +619,6 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     border: 1px solid var(--exito);
 }
 
-/* Pie de Página */
 .pie-pagina {
     text-align: center;
     padding: 24px;
@@ -645,7 +628,6 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     background-color: var(--superficie);
 }
 
-/* Adaptabilidad Móvil */
 @media (max-width: 768px) {
     .hero,
     .resumen-grid,
@@ -660,11 +642,6 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     }
 }
 
-/* ==========================================================================
-   COMPONENTES ADICIONALES: BARRA DE PROGRESO Y BOTÓN VOLVER ARRIBA
-   ========================================================================== */
-
-/* Barra de Progreso de Lectura */
 .barra-progreso {
     position: fixed;
     top: 0;
@@ -677,7 +654,6 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     box-shadow: 0 0 8px rgba(37, 99, 235, 0.5);
 }
 
-/* Botón Flotante Volver Arriba (Inferior Derecho) */
 .btn-volver-arriba {
     position: fixed;
     bottom: 28px;
