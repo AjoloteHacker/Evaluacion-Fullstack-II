@@ -608,7 +608,21 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     border-color: var(--acento);
 }
 
+.campo input.invalido,
+.campo textarea.invalido {
+    border-color: var(--alerta);
+    background-color: rgba(239, 68, 68, 0.05);
+}
+
+.error-mensaje {
+    color: var(--alerta);
+    font-size: 0.85rem;
+    font-weight: 500;
+}
+
+.resultado,
 .mensaje-estado {
+    display: none;
     margin-top: 16px;
     padding: 12px;
     border-radius: 6px;
@@ -617,6 +631,18 @@ body.oscuro .tarjeta-proyecto:hover .imagen-proyecto {
     background-color: rgba(16, 185, 129, 0.1);
     color: var(--exito);
     border: 1px solid var(--exito);
+}
+
+.resultado.visible,
+.mensaje-estado.visible {
+    display: block;
+}
+
+.resultado.error,
+.mensaje-estado.error {
+    background-color: rgba(239, 68, 68, 0.1);
+    color: var(--alerta);
+    border-color: var(--alerta);
 }
 
 .pie-pagina {

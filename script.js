@@ -1,3 +1,4 @@
+"use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -36,36 +37,115 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    const formContacto = document.getElementById('formContacto');
-    const mensajeEstado = document.getElementById('mensajeEstado');
+    const formulario = document.querySelector("#formularioContacto");
+    const nombre = document.querySelector("#nombre");
+    const email = document.querySelector("#email");
+    const mensaje = document.querySelector("#mensaje");
+    const resultado = document.querySelector("#resultado");
 
-    if (formContacto && mensajeEstado) {
-        formContacto.addEventListener('submit', (e) => {
-            e.preventDefault();
+    const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzqo9bdGfxHsTffKXugbXe8Bo3Swc9d5W11etuZLntIhBJE-Rm4hjClOgh2vf0CdjV3/exec";
 
-            const nombre = document.getElementById('nombre').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const mensaje = document.getElementById('mensaje').value.trim();
+    function mostrarError(campo, texto){
+      campo.classList.add("invalido");
+      const error = document.querySelector(
+        `#error${campo.id.charAt(0).toUpperCase()+ campo.id.slice(1)}`
+      );
+      if (error) {
+        error.textContent = texto;
+      }
+    }
 
-            if (nombre === '' || email === '' || mensaje === '') {
-                mensajeEstado.textContent = 'Por favor completa todos los campos requeridos.';
-                mensajeEstado.style.borderColor = 'var(--alerta)';
-                mensajeEstado.style.color = 'var(--alerta)';
-                mensajeEstado.hidden = false;
-                return;
-            }
-            
-            mensajeEstado.textContent = 'Gracias por tu mensaje. Nos pondremos en contacto contigo pronto.';
-            mensajeEstado.style.borderColor = 'var(--exito)';
-            mensajeEstado.style.color = 'var(--exito)';
-            mensajeEstado.hidden = false;
+    function limpiarError(campo){
+      campo.classList.remove("invalido");
+      const error = document.querySelector(
+        `#error${campo.id.charAt(0).toUpperCase()+ campo.id.slice(1)}`
+      );
+      if (error) {
+        error.textContent = "";
+      }
+    }
 
-            formContacto.reset();
+    if (formulario) {
+      formulario.addEventListener("submit", function(evento){
+        const nombreValor = nombre ? nombre.value.trim() : "";
+        const emailValor = email ? email.value.trim() : "";
+        const mensajeValor = mensaje ? mensaje.value.trim() : "";
 
-            setTimeout(() => {
-                mensajeEstado.hidden = true;
-            }, 5000);
+        let formularioValido = true;
+
+        if(nombreValor.length < 3){
+          mostrarError(nombre, "Ingresa al menos un nombre con 3 caracteres o más.");
+          formularioValido = false;
+        }else{
+          limpiarError(nombre);
+        }
+
+        if(mensajeValor.length < 10){
+          mostrarError(mensaje, "Ingresa un mensaje con al menos 10 caracteres o más.");
+          formularioValido = false;
+        }else{
+          limpiarError(mensaje);
+        }
+
+        if(!formularioValido){
+          evento.preventDefault();
+          if (resultado) {
+            resultado.classList.remove("visible");
+          }
+          return;
+        }
+
+        evento.preventDefault();
+
+        const botonEnviar = formulario.querySelector("button[type='submit']");
+        if (botonEnviar) {
+          botonEnviar.disabled = true;
+          botonEnviar.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Enviando...';
+        }
+
+        if (resultado) {
+          resultado.textContent = "Enviando mensaje, por favor espera...";
+          resultado.classList.remove("error");
+          resultado.classList.add("visible");
+        }
+
+        const datos = {
+          nombre: nombreValor,
+          email: emailValor,
+          mensaje: mensajeValor
+        };
+
+        fetch(URL_APPS_SCRIPT, {
+          method: "POST",
+          mode: "no-cors",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(datos)
+        })
+        .then(() => {
+          if (resultado) {
+            resultado.textContent = "¡Mensaje enviado con éxito! Te responderé pronto.";
+            resultado.classList.remove("error");
+            resultado.classList.add("visible");
+          }
+          formulario.reset();
+        })
+        .catch(error => {
+          console.error("Error al enviar el formulario:", error);
+          if (resultado) {
+            resultado.textContent = "Hubo un error al enviar el mensaje. Inténtalo nuevamente.";
+            resultado.classList.add("error");
+            resultado.classList.add("visible");
+          }
+        })
+        .finally(() => {
+          if (botonEnviar) {
+            botonEnviar.disabled = false;
+            botonEnviar.textContent = "Enviar Mensaje";
+          }
         });
+      });
     }
 
     const secciones = document.querySelectorAll('section[id]');
