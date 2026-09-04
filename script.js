@@ -1,3 +1,6 @@
+//Querido Programador, este codigo fue creado mediante el uso excesivo de cafeina, yo y Dios
+//y actualmente solo Dios sabe como funciona este codigo asi que te deseo suerte entendiendo el como funciona
+//Horas despericiadas = 23
 "use strict";
 
 document.addEventListener('DOMContentLoaded', () => {
