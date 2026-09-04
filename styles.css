@@ -187,6 +187,7 @@ body {
     filter: blur(8px);
     transform: translateY(4px) scale(1.05);
     animation: focusIn 3.2s ease-in-out infinite;
+    transition: animation 3s ease, transform 3s ease;
 }
 
 .focus-text span.palabra-destacada {

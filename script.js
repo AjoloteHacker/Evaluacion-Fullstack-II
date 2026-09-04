@@ -46,7 +46,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mensaje = document.querySelector("#mensaje");
     const resultado = document.querySelector("#resultado");
 
-    const URL_APPS_SCRIPT = "https://script.google.com/macros/s/AKfycbzqo9bdGfxHsTffKXugbXe8Bo3Swc9d5W11etuZLntIhBJE-Rm4hjClOgh2vf0CdjV3/exec";
+    const URL_APPS_SCRIPT = "";
 
     function mostrarError(campo, texto){
       campo.classList.add("invalido");
