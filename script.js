@@ -5,38 +5,46 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const btnTema = document.getElementById('btnTema');
-    
-    if (btnTema) {
-        btnTema.addEventListener('click', () => {
-            document.body.classList.toggle('oscuro');
-            
-            const esOscuro = document.body.classList.contains('oscuro');
-            btnTema.innerHTML = esOscuro 
-                ? '<i class="fa-solid fa-sun"></i> Modo claro' 
-                : '<i class="fa-solid fa-moon"></i> Modo oscuro';
-        });
-    }
-
     const botonesFiltro = document.querySelectorAll('.filtro-btn');
     const tarjetasProyecto = document.querySelectorAll('.tarjeta-proyecto');
 
     botonesFiltro.forEach(boton => {
         boton.addEventListener('click', () => {
+            if (boton.classList.contains('activo')) return;
+
             botonesFiltro.forEach(b => b.classList.remove('activo'));
             boton.classList.add('activo');
 
             const categoriaFiltro = boton.getAttribute('data-filtro');
 
+            // 1. Animación de salida (fade out / blur)
             tarjetasProyecto.forEach(tarjeta => {
-                const categoriaTarjeta = tarjeta.getAttribute('data-categoria');
-
-                if (categoriaFiltro === 'todos' || categoriaTarjeta === categoriaFiltro) {
-                    tarjeta.style.display = 'flex';
-                } else {
-                    tarjeta.style.display = 'none';
-                }
+                tarjeta.classList.add('filtrado-ocultar');
+                tarjeta.classList.remove('filtrado-mostrar');
             });
+
+            // 2. Transición y reaparición escalonada (stagger animation)
+            setTimeout(() => {
+                let indiceVisible = 0;
+
+                tarjetasProyecto.forEach(tarjeta => {
+                    const categoriaTarjeta = tarjeta.getAttribute('data-categoria');
+
+                    if (categoriaFiltro === 'todos' || categoriaTarjeta === categoriaFiltro) {
+                        tarjeta.style.display = 'flex';
+                        tarjeta.classList.remove('filtrado-ocultar');
+                        
+                        // Aplicar animación con desfase progresivo por tarjeta
+                        tarjeta.style.animationDelay = `${indiceVisible * 0.07}s`;
+                        tarjeta.classList.add('filtrado-mostrar');
+                        indiceVisible++;
+                    } else {
+                        tarjeta.style.display = 'none';
+                        tarjeta.classList.remove('filtrado-ocultar');
+                        tarjeta.classList.remove('filtrado-mostrar');
+                    }
+                });
+            }, 220);
         });
     });
 
