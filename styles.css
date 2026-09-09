@@ -434,6 +434,9 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
     text-align: center;
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
     transition: border-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .tarjeta-resumen:hover {
@@ -450,6 +453,104 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
 .tarjeta-resumen p {
     color: var(--secundario);
     font-size: 0.9rem;
+}
+
+/* Estilos específicos para la tarjeta de módulos */
+.tarjeta-resumen.tarjeta-modulos {
+    justify-content: flex-start;
+    text-align: left;
+    padding: 20px 22px;
+}
+
+.tarjeta-modulos-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 12px;
+    margin-bottom: 14px;
+    border-bottom: 1px solid rgba(220, 38, 38, 0.25);
+}
+
+.tarjeta-modulos-titulo-grupo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tarjeta-resumen.tarjeta-modulos .tarjeta-modulos-titulo {
+    font-size: 1.25rem;
+    color: var(--texto);
+    text-shadow: none;
+    margin: 0;
+    font-family: 'UnifrakturCook', serif;
+    letter-spacing: 0.04em;
+}
+
+.tarjeta-resumen.tarjeta-modulos .icono-modulos {
+    color: var(--acento);
+    font-size: 1.15rem;
+    filter: drop-shadow(0 0 6px rgba(220, 38, 38, 0.5));
+}
+
+.modulos-badge-contador {
+    font-size: 0.75rem;
+    font-family: 'UnifrakturCook', serif;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--acento-hover);
+    background: rgba(220, 38, 38, 0.12);
+    border: 1px solid rgba(220, 38, 38, 0.35);
+    border-radius: 20px;
+    padding: 3px 10px;
+    box-shadow: 0 0 8px rgba(220, 38, 38, 0.2);
+}
+
+.modulos-lista {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.modulo-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: rgba(0, 0, 0, 0.35);
+    border: 1px solid rgba(220, 38, 38, 0.22);
+    border-radius: 8px;
+    padding: 9px 12px;
+    transition: transform 0.25s ease, background-color 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.modulo-item:hover {
+    background: rgba(220, 38, 38, 0.12);
+    border-color: var(--acento);
+    transform: translateX(4px);
+    box-shadow: 0 2px 12px rgba(220, 38, 38, 0.25);
+}
+
+.modulo-icono {
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 24px;
+}
+
+.icono-microservicios {
+    color: var(--acento);
+    filter: drop-shadow(0 0 5px rgba(220, 38, 38, 0.6));
+}
+
+.modulo-texto {
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--texto);
+    line-height: 1.3;
+    letter-spacing: 0.02em;
 }
 
 .habilidades-grid {
