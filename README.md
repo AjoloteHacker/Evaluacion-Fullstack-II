@@ -42,7 +42,7 @@ Este sitio web fue desarrollado como parte de las evaluaciones prácticas del m�
   - Integración asíncrona mediante Fetch API.
   - Control de desplazamiento y cálculo de métricas del viewport.
 - **Recursos Externos e Iconografía**:
-  - Google Fonts: Cinzel, Cinzel Decorative e Inter.
+  - Google Fonts: UnifrakturCook.
   - Font Awesome 6.5.1: Iconografía de interfaz y navegación.
   - Devicon: Iconografía de lenguajes de programación y herramientas de desarrollo.
 

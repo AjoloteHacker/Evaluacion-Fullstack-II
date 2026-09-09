@@ -1,5 +1,7 @@
 /* Querido Programador, este codigo fue adaptado bajo la bendición de Yharnam y la Sangre Pale.
    Horas dedicadas a la cacería = 24 */
+@import url('https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&display=swap');
+
 :root {
     --fondo: #0a0c10;
     --fondo-overlay: rgba(10, 12, 16, 0.82);
@@ -28,13 +30,13 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     color: var(--texto);
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    font-family: 'UnifrakturCook', 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
     line-height: 1.6;
     scroll-behavior: smooth;
 }
 
 h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
-    font-family: 'Cinzel', serif;
+    font-family: 'UnifrakturCook', serif;
     letter-spacing: 0.03em;
 }
 
@@ -87,7 +89,7 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
     text-decoration: none;
     font-size: 0.95rem;
     font-weight: 600;
-    font-family: 'Cinzel', serif;
+    font-family: 'UnifrakturCook', serif;
     transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
@@ -103,7 +105,7 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
     border-radius: 6px;
     font-size: 0.9rem;
     font-weight: 700;
-    font-family: 'Cinzel', serif;
+    font-family: 'UnifrakturCook', serif;
     cursor: pointer;
     border: 1px solid transparent;
     transition: all 0.3s ease;
@@ -520,7 +522,7 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
     color: var(--secundario);
     cursor: pointer;
     font-size: 0.85rem;
-    font-family: 'Cinzel', serif;
+    font-family: 'UnifrakturCook', serif;
     font-weight: 600;
     transition: all 0.2s ease;
 }
@@ -673,7 +675,7 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
 .campo label {
     font-size: 0.9rem;
     font-weight: bold;
-    font-family: 'Cinzel', serif;
+    font-family: 'UnifrakturCook', serif;
 }
 
 .campo input,
@@ -737,7 +739,7 @@ h1, h2, h3, .logo, .focus-text, .focus-text-seccion, .rol, .categoria-tag {
     padding: 24px;
     color: var(--secundario);
     font-size: 0.85rem;
-    font-family: 'Cinzel', serif;
+    font-family: 'UnifrakturCook', serif;
     border-top: 1px solid var(--borde);
     background-color: var(--superficie);
     backdrop-filter: blur(12px);
