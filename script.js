@@ -17,13 +17,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
             const categoriaFiltro = boton.getAttribute('data-filtro');
 
-            // 1. Animación de salida (fade out / blur)
             tarjetasProyecto.forEach(tarjeta => {
                 tarjeta.classList.add('filtrado-ocultar');
                 tarjeta.classList.remove('filtrado-mostrar');
             });
 
-            // 2. Transición y reaparición escalonada (stagger animation)
             setTimeout(() => {
                 let indiceVisible = 0;
 
